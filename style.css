@@ -17,13 +17,14 @@ body {
     background: #f1c40f;
 }
 
-/* Flipbook Wrapper */
+/* Flipbook Wrapper (Spread) */
 .flipbook {
-    width: 595px; /* A4 width in pixels (approx) */
-    height: 842px; /* A4 height in pixels (approx) */
+    width: 1190px; /* Full width when book is open (A4 + A4) */
+    height: 842px; /* A4 height */
+    display: flex;
 }
 
-/* Hard Cover Pages */
+/* Hard Covers */
 .flipbook .hard {
     background: #c0392b !important;
     color: #fff;
@@ -32,20 +33,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 595px; /* Single A4 width */
+    height: 842px; /* A4 height */
 }
 
-.flipbook .hard small {
-    font-style: italic;
-    font-weight: lighter;
-    opacity: 0.7;
-    font-size: 14px;
-}
-
-/* Flipbook Inner Pages */
+/* Individual Pages */
 .flipbook .page {
     background: white;
-    width: 100%;
-    height: 100%;
+    width: 595px; /* A4 width */
+    height: 842px; /* A4 height */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -53,7 +49,7 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.11);
 }
 
-/* A4 Page Image */
+/* A4 Page Images */
 .page img {
     width: 100%;
     height: 100%;
